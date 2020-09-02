@@ -1,0 +1,110 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    
+    <div class="form-froup row edit" style="width: 50%;">
+        <label class="col-sm-2 col-form-label">Security Name</label>
+        <div class="col-sm-10">
+            <input readonly type="text" class="form-control" [(ngModel)]="SecurityName"
+            placeholder="Enter Secutity Name">
+        </div> 
+
+        <label class="col-sm-2 col-form-label">Investment Type</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="InvestmentType"
+            placeholder="Enter Investment Type">
+        </div>
+
+        <label class="col-sm-2 col-form-label">BBG Ticker</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="BBGTicker"
+            placeholder="Enter BBG Ticker">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Issue Date</label>
+        <div class="col-sm-10">
+            <input type="date" [(ngModel)]="IssueDate">
+        </div>
+
+        <label class="col-sm-2 col-form-label">PF Credit Rating</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="PFCreditRating"
+            placeholder="Enter PF Credit Rating">
+        </div> 
+
+        <label class="col-sm-2 col-form-label">Open Price</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="OpenPrice"
+            placeholder="Enter Open Price"  required pattern="^[0-9]*$" name="open">
+        </div>
+
+        <!-- <div *ngif="open.invalid" class="alert alert-danger">
+
+        </div> -->
+
+        <label class="col-sm-2 col-form-label">Last Price</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="LastPrice"
+            placeholder="Enter Last Price">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Call Price</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="CallPrice"
+            placeholder="Enter Call Price">
+        </div>
+
+    </div>
+
+    <div class="form-froup row" style="width: 50%;">
+        <label class="col-sm-2 col-form-label">Coupon Frequency</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="CouponFrequency"
+            placeholder="Enter Coupon Frequency">
+        </div> 
+
+        <label class="col-sm-2 col-form-label">Coupon</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="Coupon"
+            placeholder="Enter Coupon">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Coupon Type</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="CouponType"
+            placeholder="Enter Coupon Type">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Maturity</label>
+        <div class="col-sm-10">
+            <input readonly type="text" class="form-control" [(ngModel)]="Maturity"
+            placeholder="Enter Maturity">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Ask Price</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="AskPrice"
+            placeholder="Enter Ask Price">
+        </div> 
+
+        <label class="col-sm-2 col-form-label">Bid Price</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="BidPrice"
+            placeholder="Enter Bid Price">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Volume</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="Volume"
+            placeholder="Enter Volume">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Issue Currency</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="IssueCurrency"
+            placeholder="Enter Issue Currency">
+        </div>
+    </div> 
+</div>
+
+<button (click)="updateBond()" *ngIf="bond.SId!=0" class="btn btn-primary">
+    Update
+</button>

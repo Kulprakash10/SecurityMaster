@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Test_KulprakashModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DEPARTMENT">
+    <Key>
+      <PropertyRef Name="DEPARTMENT_ID" />
+    </Key>
+    <Property Name="DEPARTMENT_ID" Type="Int32" Nullable="false" />
+    <Property Name="DEPARTMENT_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MANAGER_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="SId" />
+    </Key>
+    <Property Name="SId" Type="Int32" Nullable="false" />
+    <Property Name="SName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Marks" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="Test_KulprakashEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DEPARTMENTS" EntityType="Self.DEPARTMENT" />
+    <EntitySet Name="students" EntityType="Self.student" />
+  </EntityContainer>
+</Schema>

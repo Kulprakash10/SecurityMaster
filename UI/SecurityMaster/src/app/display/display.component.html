@@ -1,0 +1,41 @@
+
+<div class="card tile" >
+    <div class="card-header">
+      Active Securities
+    </div>
+    <div class="card-body">
+      
+      <p class="card-text" appGstyle>{{ActiveCount}}</p>
+      
+    </div>
+  </div>
+
+  <div class="card tile">
+    <div class="card-header">
+      Active Securities
+    </div>
+    <div class="card-body">
+      
+      <p class="card-text" appStyle>{{InActiveCount}}</p>
+      
+    </div>
+  </div>
+
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <button routerLink="bond"
+                class="m-1 btn btn-light btn-outline-primary">Bond</button>
+            </li>
+            <li class="nav-item">
+                <button routerLink="Equity"
+                class="m-1 btn btn-light btn-outline-primary">Equity</button>
+            </li>
+        </ul>
+
+    </nav>
+
+    <router-outlet></router-outlet>
+</div>
+

@@ -1,0 +1,23 @@
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>StudentId</th>
+            <th>Student Name</th>
+            <th>Marks</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of BondList">
+            <td>{{dataItem.SId}}</td>
+            <td>{{dataItem.SName}}</td>
+            <td>{{dataItem.Marks}}</td>
+            <td>
+                <button type="button" class="btn btn-light mr-1">Edit</button>
+                <button type="button" class="btn btn-light mr-1">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
